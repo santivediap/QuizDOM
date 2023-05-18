@@ -1,3 +1,64 @@
+#submitform {
+    border-radius: 20px 20px;
+    width: 30dvh;
+    height: 7dvh;
+    margin-top: 2%;
+    background-color:black;
+    color: #fff;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 10px black;
+}
+
+.questions {
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 210%;
+    text-align: center;
+    text-shadow: 0px 4px 3px black;
+}
+
+.answer-result {
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+    text-align: center;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.41);
+}
+
+.unselected-option {
+    background-color: #ffc800;
+    border: 10px solid #c59a00;
+    box-shadow: 0px 0px 10px black;
+    padding: 2%;
+    border-radius: 20px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin: 2.5%;
+    min-width: 35%;
+    max-width: 40%;
+    min-height: 3dvh;
+    font-size: 1.5em;
+    text-align: center;
+    justify-self: center;
+}
+
+.selected-option {
+    background-color: #d500ae;
+    border: 10px solid #9e00a3;
+    box-shadow: 0px 0px 10px black;
+    padding: 2%;
+    border-radius: 20px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin: 2.5%;
+    min-width: 35%;
+    max-width: 40%;
+    min-height: 3dvh;
+    font-size: 1.5em;
+    text-align: center;
+    justify-self: center;
+}
+
 .answers-container {
     display: flex;
     flex-direction: row;
