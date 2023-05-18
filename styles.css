@@ -1,0 +1,11 @@
+main {
+    padding: 2%;
+    background-color: #001520;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: bisque;
+}
