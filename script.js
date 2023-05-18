@@ -70,3 +70,16 @@ submitForm.setAttribute("type", "submit");
 submitForm.setAttribute("id", "submitform");
 
 questionForm.appendChild(submitForm)
+
+// Create options functionalities
+
+document.querySelectorAll("form .answers-container").forEach((val, key) => {
+    document.querySelectorAll(`label:has(> input[name="${key}"])`).forEach(v => {
+        v.addEventListener("click", function(event) {
+            document.querySelectorAll(`label:has(> input[name="${key}"])`).forEach(val => {
+                val.className = "unselected-option"
+            })
+            v.className = "selected-option"
+    })
+    })
+    })
