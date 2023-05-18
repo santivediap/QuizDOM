@@ -83,3 +83,50 @@ document.querySelectorAll("form .answers-container").forEach((val, key) => {
     })
     })
     })
+
+    // Counts the correct answers
+    
+    let counter = 0;
+    
+    // Submit form button
+    
+    document.querySelector("#submitform").addEventListener("click", function(event) {
+    event.preventDefault();
+    
+    let questionsForm = document.querySelector("form")
+    
+    const options = questionsForm.querySelectorAll('input[type="radio"]:checked');
+    
+    // Form validation
+    
+    validateForm()
+    
+    function validateForm() {
+        counter = 0;
+    
+        if(options.length < questions.length) {
+            Swal.fire({
+                icon: 'error',
+                title: 'ERROR',
+                text: 'Debes seleccionar todas las respuestas!',
+              })
+        } else {
+            for(let i = 0; i < questions.length; i++) {
+                let answersElements = document.querySelectorAll(".question-container > p")
+                if(options[i].value != questions[i].valid) {
+                    answersElements[i].innerHTML = `INCORRECTO! La opción correcta era '${questions[i].valid}'`
+                } else {
+                    answersElements[i].innerHTML = "CORRECTO!"
+                    counter += 1;
+                }
+            }
+            Swal.fire(
+                'Terminaste!',
+                `Acertaste ${counter}/${questions.length} preguntas`,
+                'success'
+              )
+        }
+        return true;
+    }
+    
+    })
